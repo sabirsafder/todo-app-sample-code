@@ -1,5 +1,3 @@
-import React from 'react';
-
 type Props = {
   task: string;
   completed: boolean;
@@ -7,7 +5,7 @@ type Props = {
   deleteTask: () => void;
 };
 
-const TodoItem: React.FC<Props> = ({ task, completed, toggleTask, deleteTask }) => {
+const TodoItem = ({ task, completed, toggleTask, deleteTask }: Props) => {
   return (
     <div>
       <input type="checkbox" checked={completed} onChange={toggleTask} />
